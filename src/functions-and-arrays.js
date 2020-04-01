@@ -24,27 +24,60 @@ function sumNumbers(numbers){
 // Iteration #4: Calculate the average
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
+const averageNumbers = (numbers) => {
+  if (numbers.length === 0) {
+    return null
+  }
+  return sumNumbers(numbers) / numbers.length
+}
+
+
+const averageWordLength = (arr) => {
+  let lengthArr = arr.map(x => { //seat, correspond, programmign
+    return x.length
+  }) 
+  return averageNumbers(lengthArr)
+}
+
+
 
 // Level 2: Array of strings
-const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
-
+const wordsArr = [
+  "seat",
+  "correspond",
+  "linen",
+  "motif",
+  "hole",
+  "smell",
+  "smart",
+  "chaos",
+  "fuel",
+  "palace"
+];
 // Iteration #5: Unique arrays
 const wordsUnique = [
-  'crab',
-  'poison',
-  'contagious',
-  'simple',
-  'bring',
-  'sharp',
-  'playground',
-  'poison',
-  'communion',
-  'simple',
-  'bring'
+"crab",
+  "poison",
+  "contagious",
+  "simple",
+  "bring",
+  "sharp",
+  "playground",
+  "poison",
+  "communion",
+  "simple",
+  "bring"
 ];
-
+function uniquifyArray(array) {
+  return array.filter((item, index) => {
+    return array.indexOf(item) === index
+  })
+}
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
+function doesWordExist(listOfWords, theWord) {
+  listOfWords.includes(words) ? true : false
+}
 
 // Iteration #7: Count repetition
 const wordsCount = [
